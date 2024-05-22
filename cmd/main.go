@@ -22,6 +22,8 @@ func main() {
 
 	http.HandleFunc("GET /", handlers.HomePageHandler)
 	http.HandleFunc("GET /login", handlers.LoginPageHandler)
+	http.HandleFunc("GET /sign-up", handlers.SignUpPageHandler)
+	http.HandleFunc("GET /admin-dashboard", handlers.AdminDashboardPageHandler)
 
 	http.ListenAndServe(port, nil)
 	fmt.Println(port)
